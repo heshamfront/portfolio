@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    
+    ت
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
         menuToggle.innerHTML = nav.classList.contains('active') ? 
