@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let professionIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let isEnd = false;
     
     function type() {
         const currentProfession = professions[professionIndex];
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (!isDeleting && charIndex === currentProfession.length) {
-            isEnd = true;
             isDeleting = true;
             setTimeout(type, 1500);
         } else if (isDeleting && charIndex === 0) {
