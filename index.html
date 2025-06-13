@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هشام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>مرحباً، أنا [هشام]</h1>
+        <p>Front End Developer</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">عنّي</a></li>
+                <li><a href="skills.html">المهارات</a></li>
+                <li><a href="projects.html">المشاريع</a></li>
+                <li><a href="contact.html">تواصل معي</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" title="تبديل الوضع" aria-label="تبديل الوضع" class="theme-toggle-btn">
+          <svg id="theme-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="5.75" stroke="#ffd600" stroke-width="1.5" fill="#ffd600"/>
+            <g id="moon-part" style="display:none">
+              <path d="M21 12.79A9 9 0 0112.79 3a7 7 0 100 14 9 9 0 008.21-4.21z" fill="#0b2144"/>
+            </g>
+          </svg>
+        </button>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="about-card">
+                <img src="/photos/WhatsApp Image 2025-04-10 at 15.30.53_25c54c25.jpg" alt="صورة شخصية" class="profile-img">
+                <div class="about-content">
+                    <h2>عنّي</h2>
+                    <ul class="about-details">
+                        <li><strong>الاسم:</strong> هشام محمد</li>
+                        <li><strong>السن:</strong> 28</li>
+                        <li><strong>العنوان:</strong> القاهرة، مصر</li>
+                        <li><strong>الوظيفة:</strong> Front End Developer</li>
+                    </ul>
+                    <p id="about-animated-text"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 [اسمك]. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script>
+      // Theme toggle logic
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const moonPart = themeIcon.querySelector('#moon-part');
+        function setTheme(mode) {
+          if(mode === 'dark') {
+            document.body.classList.add('dark-mode');
+            moonPart.style.display = 'block';
+            themeIcon.querySelector('circle').setAttribute('fill', '#102040');
+            themeIcon.querySelector('circle').setAttribute('stroke', '#fff');
+          } else {
+            document.body.classList.remove('dark-mode');
+            moonPart.style.display = 'none';
+            themeIcon.querySelector('circle').setAttribute('fill', '#ffd600');
+            themeIcon.querySelector('circle').setAttribute('stroke', '#ffd600');
+          }
+        }
+        function toggleTheme() {
+          const isDark = document.body.classList.toggle('dark-mode');
+          setTheme(isDark ? 'dark' : 'light');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        toggleBtn.addEventListener('click', toggleTheme);
+        // Init
+        const savedTheme = localStorage.getItem('theme');
+        setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+      });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

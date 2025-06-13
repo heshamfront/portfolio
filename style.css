@@ -1,0 +1,615 @@
+body {
+    font-family: 'Cairo', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f6f8fa;
+    color: #102040;
+    direction: rtl;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #0b2144 0%, #183661 100%);
+    color: #e2eaff;
+}
+body.dark-mode header {
+    background: linear-gradient(90deg, #0b2144 60%, #183661 100%);
+    color: #fff;
+}
+body.dark-mode nav a {
+    color: #e2eaff;
+}
+body.dark-mode nav a:hover {
+    color: #ffd600;
+}
+body.dark-mode nav a::after {
+    background: #ffd600;
+}
+body.dark-mode section,
+body.dark-mode .about-card {
+    background: #14294a;
+    color: #c6d6f7;
+    box-shadow: 0 2px 16px rgba(11,33,68,0.15);
+    border-color: #223e67;
+}
+body.dark-mode .project-card {
+    background: transparent;
+    color: #c6d6f7;
+    box-shadow: 0 2px 16px rgba(11,33,68,0.15);
+    border-color: #223e67;
+}
+body.dark-mode .about-section,
+body.dark-mode .about-card,
+body.dark-mode .about-content {
+    color: #c6d6f7;
+}
+body.dark-mode #about-animated-text {
+    color: #e0e6f6;
+}
+body.dark-mode .about-content h2,
+body.dark-mode .about-content strong {
+    color: #fff;
+}
+body.dark-mode .about-details li {
+    color: #c6d6f7;
+}
+body.dark-mode .progress-bar {
+    background: #223e67;
+}
+body.dark-mode .progress {
+    background: linear-gradient(90deg, #2d70d6 0%, #58b8ff 100%);
+    color: #102040;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(88,184,255,0.12);
+    border-radius: 8px;
+}
+body.dark-mode .skill span {
+    color: #e0e6f6;
+}
+body.dark-mode .progress::after {
+    content: '';
+}
+body.dark-mode .btn-demo, body.dark-mode .btn-github, body.dark-mode .contact-btn {
+    background: #223e67;
+    color: #ffd600;
+    border: 1px solid #2b4d7c;
+}
+body.dark-mode .btn-demo:hover, body.dark-mode .btn-github:hover, body.dark-mode .contact-btn:hover {
+    background: #2b4d7c;
+    color: #fff;
+}
+body.dark-mode footer {
+    background: #0b2144;
+    color: #b3c6e0;
+}
+body.dark-mode .social-icon {
+    color: #b3c6e0;
+}
+body.dark-mode .social-icon:hover {
+    color: #ffd600;
+}
+
+/* زر تبديل الوضع */
+.theme-toggle-btn {
+    background: #fff;
+    border: 2px solid #ffd600;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    outline: none;
+    position: relative;
+}
+.theme-toggle-btn:hover {
+    background: #ffe066;
+    border-color: #ffd600;
+}
+body.dark-mode .theme-toggle-btn {
+    background: #223e67;
+    border: 2px solid #ffd600;
+}
+body.dark-mode .theme-toggle-btn:hover {
+    background: #2b4d7c;
+    border-color: #ffd600;
+}
+.theme-toggle-btn svg {
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .theme-toggle-btn {
+        margin-right: 8px;
+        width: 32px;
+        height: 32px;
+    }
+}
+header {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: #fff;
+    padding: 20px 0 10px 0; /* تقليل ارتفاع الهيدر */
+    text-align: center;
+}
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+header p {
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    min-height: 32px; /* تقليل ارتفاع النافبار */
+    align-items: center;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+    position: relative;
+}
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffd600;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+nav a:hover {
+    color: #ffd600;
+    transform: scale(1.05);
+}
+nav a:hover::after {
+    width: 100%;
+}
+main {
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px 40px 20px;
+    min-height: 70vh; /* زيادة ارتفاع الصفحة */
+}
+body.projects-page main {
+    padding-left: 64px;
+}
+@media (max-width: 700px) {
+  body.projects-page main {
+    padding-left: 16px;
+  }
+}
+section {
+    margin-bottom: 60px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 50px 30px 50px 30px;
+    min-height: 320px;
+}
+.projects-section {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+    padding: 0 0 0 48px; /* زيادة padding-left فقط */
+}
+@media (max-width: 700px) {
+  .projects-section {
+    padding-left: 16px;
+  }
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background: none;
+    box-shadow: none;
+}
+.about-card {
+    background: #f9fafd;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.10);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeInUp 1s;
+    direction: ltr;
+}
+.about-card > .profile-img {
+    order: 0;
+}
+.about-card > .about-content {
+    order: 1;
+    text-align: right;
+    direction: rtl;
+}
+
+@media (max-width: 800px) {
+    .about-card {
+        flex-direction: column;
+        gap: 24px;
+        padding: 28px 8px;
+    }
+}
+
+.profile-img {
+    width: 260px;
+    height: 260px;
+    max-width: 90vw;
+    max-height: 40vw;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 12px rgba(0,123,255,0.13);
+    margin-bottom: 24px;
+    background: #e3f2fd;
+    transition: width 0.3s, height 0.3s;
+}
+@media (max-width: 600px) {
+    .profile-img {
+        width: 140px;
+        height: 140px;
+        max-width: 60vw;
+        max-height: 60vw;
+    }
+}
+
+.about-content h2 {
+    margin-top: 0;
+    color: #102040;
+    margin-bottom: 14px;
+}
+.about-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    font-size: 1.12rem;
+    color: #102040;
+}
+.about-details li {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.about-details strong {
+    color: #007bff;
+    font-weight: bold;
+    margin-left: 3px;
+}
+#about-animated-text {
+    font-size: 1.18rem;
+    color: #102040;
+    min-height: 48px;
+    line-height: 1.9;
+    letter-spacing: 0.2px;
+    white-space: pre-line;
+    border-right: 2px solid #007bff;
+    overflow: hidden;
+    animation: blink-caret 0.8s step-end infinite;
+}
+@keyframes blink-caret {
+    0%, 100% { border-color: #007bff; }
+    50% { border-color: transparent; }
+}
+
+.skills-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 20px;
+}
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.skill span {
+    min-width: 90px;
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.05rem;
+}
+.progress-bar {
+    flex: 1;
+    background: #e3f2fd;
+    border-radius: 18px;
+    height: 22px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,123,255,0.07);
+}
+.progress {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    height: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 14px 0 0;
+    border-radius: 18px 0 0 18px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    transition: width 1s cubic-bezier(.4,2,.3,1);
+}
+
+
+.projects-section {
+        background: url('./photos/WhatsApp\ Image\ 2025-04-10\ at\ 15.30.53_25c54c25.jpg') center/cover no-repeat;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.projects-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(246, 248, 250, 0.93);
+    z-index: 0;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+    position: relative;
+    z-index: 1;
+    padding: 32px 10px;
+}
+
+.project-card {
+    position: relative;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    min-height: 260px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    animation: fadeInUp 0.7s forwards;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+}
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(16,32,64,0.38) 65%, rgba(16,32,64,0.12) 100%);
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+}
+body.dark-mode .project-card::before {
+    background: linear-gradient(to top, rgba(16,32,64,0.38) 65%, rgba(16,32,64,0.12) 100%);
+}
+.project-card > * {
+    position: relative;
+    z-index: 2;
+}
+.project1-bg {
+    background: url('./photos/project1.png') center/cover no-repeat;
+}
+.project2-bg {
+    background: url('./photos/project2.png') center/cover no-repeat;
+}
+.project3-bg {
+    background: url('./photos/project3.png') center/cover no-repeat;
+}
+.project4-bg {
+    background: url('./photos/project4.png') center/cover no-repeat;
+}
+.project5-bg {
+    background: url('./photos/project5.png') center/cover no-repeat;
+}
+
+body.dark-mode .project-card.project1-bg::after,
+body.dark-mode .project-card.project2-bg::after,
+body.dark-mode .project-card.project3-bg::after,
+body.dark-mode .project-card.project4-bg::after,
+body.dark-mode .project-card.project5-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(16,32,64,0.55);
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+/* تأكد أن ::before دائماً z-index:1 و ::after z-index:2 والنص z-index:3 */
+.project-card::before {
+    z-index: 1;
+}
+body.dark-mode .project-card > * {
+    position: relative;
+    z-index: 3;
+}
+body.dark-mode .project-card > * {
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: 100%;
+        min-height: 180px;
+        padding: 14px;
+    }
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.3s; }
+.project-card:hover {
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 4px 16px rgba(0,123,255,0.11);
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.project-card h3 {
+    margin-top: 0;
+}
+.project-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+.btn-demo, .btn-github {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 1px 4px rgba(0,123,255,0.07);
+    border: none;
+    cursor: pointer;
+}
+.btn-demo {
+    background: #007bff;
+    color: #fff;
+}
+.btn-demo:hover {
+    background: #0056b3;
+    color: #ffd600;
+    transform: scale(1.06);
+}
+.btn-github {
+    background: #222;
+    color: #fff;
+}
+.btn-github:hover {
+    background: #444;
+    color: #ffd600;
+    transform: scale(1.06);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 56px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s 0.6s both;
+    position: relative;
+}
+
+.social-icon.facebook {
+    background: #3b5998;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.social-icon.facebook:hover {
+    background: #1877f3;
+    color: #fff;
+    transform: scale(1.12) rotate(-6deg);
+}
+
+.social-icon.instagram {
+    background: #e4405f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.social-icon.instagram:hover {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+    transform: scale(1.12) rotate(6deg);
+}
+
+.social-icon.whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.social-icon.whatsapp:hover {
+    background: #25d366;
+    color: #fff;
+    transform: scale(1.12) rotate(-6deg);
+}
+
+.social-icon.telegram {
+    background: #229ed9;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.social-icon.telegram:hover {
+    background: #229ed9;
+    color: #fff;
+    transform: scale(1.12) rotate(6deg);
+}
+
+form#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0,123,255,0.08);
+}
+form button:hover {
+    background: #0056b3;
+    transform: scale(1.05) rotate(-2deg);
+}
+#form-message {
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    padding: 18px 0;
+    background: #222;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 8px 8px 0 0;
+    font-size: 1rem;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هشام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>مرحباً، أنا [هشام]</h1>
+        <p>Front End Developer</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">عنّي</a></li>
+                <li><a href="skills.html">المهارات</a></li>
+                <li><a href="projects.html">المشاريع</a></li>
+                <li><a href="contact.html">تواصل معي</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" title="تبديل الوضع" aria-label="تبديل الوضع" class="theme-toggle-btn">
+          <svg id="theme-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="5.75" stroke="#ffd600" stroke-width="1.5" fill="#ffd600"/>
+            <g id="moon-part" style="display:none">
+              <path d="M21 12.79A9 9 0 0112.79 3a7 7 0 100 14 9 9 0 008.21-4.21z" fill="#0b2144"/>
+            </g>
+          </svg>
+        </button>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>تواصل معي</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="اسمك" required>
+                <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+                <textarea name="message" placeholder="رسالتك" required></textarea>
+                <button type="submit" class="contact-btn">إرسال</button>
+            </form>
+            <div id="contact-success" style="display:none; color:green; margin-top:15px;">تم إرسال رسالتك بنجاح!</div>
+            <div class="social-media">
+                <a href="https://facebook.com/your-facebook" target="_blank" class="social-icon facebook" title="Facebook">
+                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.676 0H1.324C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.324 24h11.495v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.676 0"/></svg>
+                </a>
+                <a href="https://instagram.com/your-instagram" target="_blank" class="social-icon instagram" title="Instagram">
+                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.974.976 1.246 2.243 1.308 3.608.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.976-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.976-.975-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608C4.517 2.565 5.784 2.295 7.15 2.233 8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.78.127 4.602.375 3.545 1.432 2.488 2.489 2.24 3.667 2.183 4.939 2.125 6.219 2.113 6.629 2.113 12c0 5.371.012 5.781.07 7.061.057 1.272.305 2.45 1.362 3.507 1.057 1.057 2.235 1.305 3.507 1.362C8.332 23.988 8.741 24 12 24s3.668-.012 4.948-.07c1.272-.057 2.45-.305 3.507-1.362 1.057-1.057 1.305-2.235 1.362-3.507.058-1.28.07-1.689.07-7.061 0-5.371-.012-5.781-.07-7.061-.057-1.272-.305-2.45-1.362-3.507C19.398.375 18.22.127 16.948.07 15.668.012 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.2-11.406a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                </a>
+                <a href="https://wa.me/your-whatsapp" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.96L0 24l6.27-1.64A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.7 0-3.36-.44-4.8-1.28l-.34-.2-3.72.97.99-3.63-.21-.35A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.8c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.43-2.25-1.36-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.29.29-.48.09-.18.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.02-.22-.54-.45-.47-.61-.48-.16-.01-.36-.01-.55-.01-.19 0-.5.07-.76.34-.26.27-1 1-.99 2.43.01 1.43 1.02 2.81 1.16 3 .14.18 2.01 3.08 4.87 4.2.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.26-.18-.54-.32z"/></svg>
+                </a>
+                <a href="https://t.me/your-telegram" target="_blank" class="social-icon telegram" title="Telegram">
+                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.373 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12c0-6.627-5.372-12-12-12zm5.93 8.304l-1.62 7.661c-.122.546-.44.681-.892.423l-2.469-1.819-1.191 1.15c-.131.13-.241.241-.495.241l.176-2.497 4.543-4.108c.197-.176-.043-.274-.307-.098l-5.617 3.537-2.421-.756c-.526-.163-.537-.526.11-.777l9.447-3.645c.444-.163.832.108.69.771z"/></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 [اسمك]. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+    <script>
+      // Theme toggle logic
+      const toggleBtn = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const moonPart = themeIcon.querySelector('#moon-part');
+      function setTheme(mode) {
+        if(mode === 'dark') {
+          document.body.classList.add('dark-mode');
+          moonPart.style.display = 'block';
+          themeIcon.querySelector('circle').setAttribute('fill', '#102040');
+          themeIcon.querySelector('circle').setAttribute('stroke', '#fff');
+        } else {
+          document.body.classList.remove('dark-mode');
+          moonPart.style.display = 'none';
+          themeIcon.querySelector('circle').setAttribute('fill', '#ffd600');
+          themeIcon.querySelector('circle').setAttribute('stroke', '#ffd600');
+        }
+      }
+      function toggleTheme() {
+        const isDark = document.body.classList.toggle('dark-mode');
+        setTheme(isDark ? 'dark' : 'light');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      }
+      toggleBtn.addEventListener('click', toggleTheme);
+      // Init
+      const savedTheme = localStorage.getItem('theme');
+      setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+    </script>
+</html>
