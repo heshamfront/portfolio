@@ -139,6 +139,9 @@ header .logo {
     justify-content: space-around;
     align-items: center;
     direction: ltr;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 header h1 {
     margin: 0 0 10px 0;
@@ -401,18 +404,18 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(16,32,64,0.38) 65%, rgba(16,32,64,0.12) 100%);
+    background: linear-gradient(to top, rgba(16, 32, 64, 0.11) 65%, rgba(16,32,64,0.12) 100%);
     z-index: 1;
     border-radius: 10px;
     pointer-events: none;
-}
-body.dark-mode .project-card::before {
-    background: linear-gradient(to top, rgba(16,32,64,0.38) 65%, rgba(16,32,64,0.12) 100%);
-}
-.project-card > * {
+} 
+ body.dark-mode .project-card::before { 
+    background: linear-gradient(to top, rgba(138, 159, 201, 0.137) 65%, rgba(16,32,64,0.12) 100%);
+} 
+ .project-card > * {
     position: relative;
     z-index: 2;
-}
+} 
 .project1-bg {
     background: url('./photos/project1.png') center/cover no-repeat;
 }
