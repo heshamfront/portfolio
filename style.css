@@ -143,9 +143,18 @@ header .logo {
         flex-direction: column;
     }
 }
-header h1 {
-    margin: 0 0 10px 0;
+header .hill {
+    display: flex;
+    flex-direction: column;
+
+
+}
+header a {
     font-size: 2.5rem;
+    text-align: start;
+        @media (max-width:700px) {
+            text-align: center;
+    }
 }
 header p {
     margin: 0 0 20px 0;
@@ -164,9 +173,11 @@ nav ul {
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-size: 20px;
     transition: color 0.2s, transform 0.2s;
     position: relative;
+    
 }
 nav a::after {
     content: '';
