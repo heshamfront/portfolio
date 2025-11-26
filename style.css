@@ -461,6 +461,9 @@ section {
 .project5-bg {
     background: url('./photos/project5.png') center/cover no-repeat;
 }
+.project6-bg {
+    background: url('./photos/Screenshot\ \(179\).png') center/cover no-repeat;
+}
 
 body.dark-mode .project-card.project1-bg::after,
 body.dark-mode .project-card.project2-bg::after,
