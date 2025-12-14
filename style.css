@@ -464,6 +464,9 @@ section {
 .project6-bg {
     background: url('./photos/Screenshot\ \(179\).png') center/cover no-repeat;
 }
+.project7-bg {
+    background: url('./photos/vercel-one.png') center/cover no-repeat;
+}
 
 body.dark-mode .project-card.project1-bg::after,
 body.dark-mode .project-card.project2-bg::after,
