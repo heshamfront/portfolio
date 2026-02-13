@@ -389,7 +389,7 @@ section {
 
 
 .projects-section {
-        background: url('./photos/WhatsApp\ Image\ 2025-04-10\ at\ 15.30.53_25c54c25.jpg') center/cover no-repeat;
+    background: url('./photos/WhatsApp\ Image\ 2025-04-10\ at\ 15.30.53_25c54c25.jpg') center/cover no-repeat;
     position: relative;
     border-radius: 18px;
     overflow: hidden;
@@ -470,8 +470,14 @@ section {
 .project8-bg {
     background: url('./photos/Screenshot\ \(204\).png') center/cover no-repeat;
 }
+/* .project8-bg {
+    background: url('./photos/Screenshot\ \(204\).png') center/cover no-repeat;
+} */
+.project9-bg {
+    background: url('./photos/teach.png') center/cover no-repeat;
+}
 
-body.dark-mode .project-card.project1-bg::after,
+/* body.dark-mode .project-card.project1-bg::after,
 body.dark-mode .project-card.project2-bg::after,
 body.dark-mode .project-card.project3-bg::after,
 body.dark-mode .project-card.project4-bg::after,
@@ -479,13 +485,11 @@ body.dark-mode .project-card.project5-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(16,32,64,0.55);
-    border-radius: 10px;
-    z-index: 2;
-    pointer-events: none;
-}
-/* تأكد أن ::before دائماً z-index:1 و ::after z-index:2 والنص z-index:3 */
-.project-card::before {
+    /* background: rgba(16,32,64,0.55); */
+   
+/* } */ 
+ /* تأكد أن ::before دائماً z-index:1 و ::after z-index:2 والنص z-index:3 */ 
+/* .project-card::before {
     z-index: 1;
 }
 body.dark-mode .project-card > * {
@@ -495,7 +499,7 @@ body.dark-mode .project-card > * {
 body.dark-mode .project-card > * {
     position: relative;
     z-index: 3;
-}
+} */
 
 @media (max-width: 600px) {
     .project-card {
